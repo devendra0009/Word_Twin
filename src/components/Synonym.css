@@ -1,0 +1,26 @@
+.word{
+    padding:5px 8px;
+    border-radius:8px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.wordContainer
+{
+    overflow-y:scroll;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1rem;
+    margin: 1rem 0;
+}
+@media (max-width:999px){
+    .wordContainer{
+        
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+@media (max-width:499px){
+    .wordContainer{
+        
+        grid-template-columns:repeat(2,1fr);
+    }
+}

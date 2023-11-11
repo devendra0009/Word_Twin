@@ -8,19 +8,10 @@
   }
   
   .title {
-    font-size: 7vw;
+    font-size: 7rem;
+    text-align: center;
     text-transform: uppercase;
     font-family: "Montserrat", sans-serif;
-  }
-
-  @media (max-width: 900px) {
-    .header {
-      justify-content: space-evenly;
-      height: 25vh;
-    }
-    .title {
-      font-size: 11vw;
-    }
   }
   
   .inputs {
@@ -30,9 +21,31 @@
   }
   
   .search {
-    width: 43%;
+    width: 50%;
   }
   
   .select {
-    width: 43%;
+    width: 50%;
   }
+  @media (max-width: 999px) {
+    .header {
+      justify-content: space-evenly;
+      height: 25vh;
+    }
+    .title {
+      font-size: 5rem;
+    }
+    .search{
+      width: 60%;
+    }
+  }
+  @media (max-width: 599px) {
+    
+    .title {
+      font-size: 3rem;
+    }
+    .search{
+      width: 80%;
+    }
+  }
+  

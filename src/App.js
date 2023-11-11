@@ -14,16 +14,16 @@ function App() {
   const [darkTheme, setDarkTheme] = useState(true);
 
 
+  const dictionaryApi = async () => {
+    try {
+      const res = await axios.get(`https://api.datamuse.com/words?ml=${word}`);
+      // console.log(data.data[0].word);
+      setSynonym(res.data);
+    } catch (err) {
+      console.log(err.status);
+    }
+  };
   useEffect(() => {
-    const dictionaryApi = async () => {
-      try {
-        const res = await axios.get(`https://api.datamuse.com/words?ml=${word}`);
-        // console.log(data.data[0].word);
-        setSynonym(res.data);
-      } catch (err) {
-        console.log(err.status);
-      }
-    };
     dictionaryApi();
   }, [word]);
 
@@ -41,15 +41,10 @@ function App() {
         maxWidth="md"
         style={{ display: "flex", height: "100vh", flexDirection: "column" }}
       >
-        <div style={{ position: "absolute", top: 0, right: 15, margin: 10 }}>
-          <FormControlLabel
-            control={<Switch defaultChecked />}
-            onChange={() => setDarkTheme(!darkTheme)}
-            label={darkTheme ? "Dark Mode" : "Pink Mode"}
-          />
-        </div>
-        <Header word={word} setWord={setWord} darkMode={darkTheme} />
-        <Synonym myWord={word} wordSynonym={synonym} />
+        {/* <div style={{ position: "absolute", top: 0, right: 15, margin: 10 }}> */}
+        {/* </div> */}
+        <Header word={word} setWord={setWord} darkMode={darkTheme} setDarkTheme={setDarkTheme} isDark={darkTheme}/>
+        <Synonym myWord={word} wordSynonym={synonym}  isDark={darkTheme}/>
         <Footer darkTheme={darkTheme}/>
       </Container>
     </div>
