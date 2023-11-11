@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Word_Twin/static/css/main.60b7f7d5.css",
-    "main.js": "/Word_Twin/static/js/main.b36054f0.js",
+    "main.css": "/Word_Twin/static/css/main.b289a687.css",
+    "main.js": "/Word_Twin/static/js/main.00e37f4a.js",
     "index.html": "/Word_Twin/index.html",
-    "main.60b7f7d5.css.map": "/Word_Twin/static/css/main.60b7f7d5.css.map",
-    "main.b36054f0.js.map": "/Word_Twin/static/js/main.b36054f0.js.map"
+    "main.b289a687.css.map": "/Word_Twin/static/css/main.b289a687.css.map",
+    "main.00e37f4a.js.map": "/Word_Twin/static/js/main.00e37f4a.js.map"
   },
   "entrypoints": [
-    "static/css/main.60b7f7d5.css",
-    "static/js/main.b36054f0.js"
+    "static/css/main.b289a687.css",
+    "static/js/main.00e37f4a.js"
   ]
 }
